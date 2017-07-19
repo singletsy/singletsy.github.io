@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="学习," />
 
 
 
@@ -93,12 +93,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="this指向通过函数名()直接调用：this指向window1234567function func()&amp;#123;    console.log(this);&amp;#125;//① 通过函数名()直接调用：this指向windowfunc(); // this---&amp;gt;window 通过对象.函数名()调用的：this指向这个对象12345678910111213141516function f">
+<meta name="keywords" content="学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="this指向">
+<meta property="og:url" content="http://yoursite.com/2017/07/19/this指向/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="this指向通过函数名()直接调用：this指向window1234567function func()&amp;#123;    console.log(this);&amp;#125;//① 通过函数名()直接调用：this指向windowfunc(); // this---&amp;gt;window 通过对象.函数名()调用的：this指向这个对象12345678910111213141516function f">
+<meta property="og:updated_time" content="2017-07-19T11:01:14.782Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="this指向">
+<meta name="twitter:description" content="this指向通过函数名()直接调用：this指向window1234567function func()&amp;#123;    console.log(this);&amp;#125;//① 通过函数名()直接调用：this指向windowfunc(); // this---&amp;gt;window 通过对象.函数名()调用的：this指向这个对象12345678910111213141516function f">
 
 
 
@@ -126,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/19/this指向/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>this指向 | Hexo</title>
   
 
 
@@ -157,9 +162,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -252,9 +255,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -280,9 +283,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/19/this指向/" itemprop="url">this指向</a></h1>
+          <h1 class="post-title" itemprop="name headline">this指向</h1>
         
 
         <div class="post-meta">
@@ -351,192 +352,99 @@
       
 
       
-        
-          
-            <h1 id="this指向"><a href="#this指向" class="headerlink" title="this指向"></a>this指向</h1><h4 id="通过函数名-直接调用：this指向window"><a href="#通过函数名-直接调用：this指向window" class="headerlink" title="通过函数名()直接调用：this指向window"></a>通过函数名()直接调用：this指向window</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function func()&#123;</div><div class="line">    console.log(this);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//① 通过函数名()直接调用：this指向window</div><div class="line">func(); // this---&gt;window</div></pre></td></tr></table></figure>
+        <h1 id="this指向"><a href="#this指向" class="headerlink" title="this指向"></a>this指向</h1><h4 id="通过函数名-直接调用：this指向window"><a href="#通过函数名-直接调用：this指向window" class="headerlink" title="通过函数名()直接调用：this指向window"></a>通过函数名()直接调用：this指向window</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function func()&#123;</div><div class="line">    console.log(this);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//① 通过函数名()直接调用：this指向window</div><div class="line">func(); // this---&gt;window</div></pre></td></tr></table></figure>
 <h4 id="通过对象-函数名-调用的：this指向这个对象"><a href="#通过对象-函数名-调用的：this指向这个对象" class="headerlink" title="通过对象.函数名()调用的：this指向这个对象"></a>通过对象.函数名()调用的：this指向这个对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function func()&#123;</div><div class="line">    console.log(this);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//② 通过对象.函数名()调用的：this指向这个对象</div><div class="line">    // 狭义对象</div><div class="line">    var obj = &#123;</div><div class="line">        name:&quot;obj&quot;,</div><div class="line">        func1 :func</div><div class="line">    &#125;;</div><div class="line">    obj.func1(); // this---&gt;obj</div><div class="line">    </div><div class="line">    // 广义对象</div><div class="line">    document.getElementById(&quot;div&quot;).onclick = function()&#123;</div><div class="line">        this.style.backgroundColor = &quot;red&quot;;</div><div class="line">    &#125;; // this---&gt;div</div></pre></td></tr></table></figure>
 <h4 id="函数作为数组的一个元素，通过数组下标调用的：this指向这个数组"><a href="#函数作为数组的一个元素，通过数组下标调用的：this指向这个数组" class="headerlink" title="函数作为数组的一个元素，通过数组下标调用的：this指向这个数组"></a>函数作为数组的一个元素，通过数组下标调用的：this指向这个数组</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function func()&#123;</div><div class="line">    console.log(this);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//③ 函数作为数组的一个元素，通过数组下标调用的：this指向这个数组</div><div class="line">var arr = [func,1,2,3];</div><div class="line">arr[0]();  // this---&gt;arr</div></pre></td></tr></table></figure>
 <h4 id="函数作为window内置函数的回调函数调用：this指向window（-setInterval-setTimeout-等）"><a href="#函数作为window内置函数的回调函数调用：this指向window（-setInterval-setTimeout-等）" class="headerlink" title="函数作为window内置函数的回调函数调用：this指向window（ setInterval setTimeout 等）"></a>函数作为window内置函数的回调函数调用：this指向window（ setInterval setTimeout 等）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function func()&#123;</div><div class="line">    console.log(this);</div><div class="line">&#125;</div><div class="line">&lt;!-- more --&gt;</div><div class="line"></div><div class="line">//④ 函数作为window内置函数的回调函数调用：this指向window</div><div class="line">setTimeout(func,1000);// this---&gt;window</div><div class="line">//setInterval(func,1000);</div></pre></td></tr></table></figure>
 <h4 id="函数作为构造函数，用new关键字调用时：this指向新new出的对象"><a href="#函数作为构造函数，用new关键字调用时：this指向新new出的对象" class="headerlink" title="函数作为构造函数，用new关键字调用时：this指向新new出的对象"></a>函数作为构造函数，用new关键字调用时：this指向新new出的对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function func()&#123;</div><div class="line">    console.log(this);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//⑤ 函数作为构造函数，用new关键字调用时：this指向新new出的对象</div><div class="line">var obj = new func(); //this---&gt;new出的新obj</div></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
 
     <div>
       
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wechat-person.jpg" alt="TT wechat" style="width: 200px; max-width: 100%;"/>
+    <div>扫~~~~~~扫</div>
+</div>
+
+
+      
     </div>
 
     <div>
       
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/19/远程仓库管理操作/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="TT">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/19/远程仓库管理操作/" itemprop="url">远程仓库管理操作</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-19T18:50:30+08:00">
-                2017-07-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">in</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>点按钮有惊喜</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat-qcode.jpg" alt="TT WeChat Pay"/>
+          <p>微信打赏</p>
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
       
       
+    </div>
+  </div>
 
+
+      
+    </div>
+
+    <div>
       
         
-          
-            <h1 id="分支相关的命令"><a href="#分支相关的命令" class="headerlink" title="分支相关的命令"></a>分支相关的命令</h1><h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h2><p>git branch 分支名称</p>
-<h2 id="查看所有分支"><a href="#查看所有分支" class="headerlink" title="查看所有分支"></a>查看所有分支</h2><p>git branch</p>
-<h2 id="切换到指定分支"><a href="#切换到指定分支" class="headerlink" title="切换到指定分支"></a>切换到指定分支</h2><p>git checkout 分支名</p>
-<h2 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h2><p>git merge 分支名<br>将指定的分支 合并到 当前的分支</p>
-<h2 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h2><p>git branch -d 分支名称</p>
-<p>删除分支的时候，如果分支修改的内容没有被合并，那么会提示不能删除，要删除需要合并，或者使用-D</p>
-<h2 id="创建并切换到新的分支"><a href="#创建并切换到新的分支" class="headerlink" title="创建并切换到新的分支"></a>创建并切换到新的分支</h2><p>git checkout -b 分支名</p>
-<p>在分支进行切换之前，要对所有的内容进行一次add 和commit操作</p>
-<p>master分支是在仓库初始化之后，第一次提交完成的时候才出现的！</p>
 
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/学习/" rel="tag"># 学习</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/19/远程仓库管理操作/" rel="next" title="远程仓库管理操作">
+                <i class="fa fa-chevron-left"></i> 远程仓库管理操作
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -544,6 +452,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -564,8 +476,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -638,6 +559,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#this指向"><span class="nav-number">1.</span> <span class="nav-text">this指向</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通过函数名-直接调用：this指向window"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">通过函数名()直接调用：this指向window</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过对象-函数名-调用的：this指向这个对象"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">通过对象.函数名()调用的：this指向这个对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数作为数组的一个元素，通过数组下标调用的：this指向这个数组"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">函数作为数组的一个元素，通过数组下标调用的：this指向这个数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数作为window内置函数的回调函数调用：this指向window（-setInterval-setTimeout-等）"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">函数作为window内置函数的回调函数调用：this指向window（ setInterval setTimeout 等）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数作为构造函数，用new关键字调用时：this指向新new出的对象"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">函数作为构造函数，用new关键字调用时：this指向新new出的对象</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -756,10 +693,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 

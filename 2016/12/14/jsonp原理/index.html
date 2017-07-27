@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="this指向通过函数名()直接调用：this指向window1234567function func()&amp;#123;    console.log(this);&amp;#125;//① 通过函数名()直接调用：this指向windowfunc(); // this---&amp;gt;window 通过对象.函数名()调用的：this指向这个对象12345678910111213141516function f">
+<meta name="description" content="jsonp原理介绍12345678910111213平时写一个script标签 src属性赋值一个连接浏览器在解析这个script标签的时候,会向src所指向的这个地址发送一个请求将请求下来的数据,当做js代码直接执行url:请求的链接callback:请求成功之后的回调函数function jsonp(url,callback)&amp;#123;    var cbName=&amp;quot;jsonp&amp;q">
 <meta name="keywords" content="学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="this指向">
-<meta property="og:url" content="http://yoursite.com/2017/07/19/this指向/index.html">
+<meta property="og:title" content="jsonp原理">
+<meta property="og:url" content="http://yoursite.com/2016/12/14/jsonp原理/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="this指向通过函数名()直接调用：this指向window1234567function func()&amp;#123;    console.log(this);&amp;#125;//① 通过函数名()直接调用：this指向windowfunc(); // this---&amp;gt;window 通过对象.函数名()调用的：this指向这个对象12345678910111213141516function f">
+<meta property="og:description" content="jsonp原理介绍12345678910111213平时写一个script标签 src属性赋值一个连接浏览器在解析这个script标签的时候,会向src所指向的这个地址发送一个请求将请求下来的数据,当做js代码直接执行url:请求的链接callback:请求成功之后的回调函数function jsonp(url,callback)&amp;#123;    var cbName=&amp;quot;jsonp&amp;q">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-19T11:28:09.078Z">
+<meta property="og:updated_time" content="2017-07-27T00:44:18.886Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="this指向">
-<meta name="twitter:description" content="this指向通过函数名()直接调用：this指向window1234567function func()&amp;#123;    console.log(this);&amp;#125;//① 通过函数名()直接调用：this指向windowfunc(); // this---&amp;gt;window 通过对象.函数名()调用的：this指向这个对象12345678910111213141516function f">
+<meta name="twitter:title" content="jsonp原理">
+<meta name="twitter:description" content="jsonp原理介绍12345678910111213平时写一个script标签 src属性赋值一个连接浏览器在解析这个script标签的时候,会向src所指向的这个地址发送一个请求将请求下来的数据,当做js代码直接执行url:请求的链接callback:请求成功之后的回调函数function jsonp(url,callback)&amp;#123;    var cbName=&amp;quot;jsonp&amp;q">
 
 
 
@@ -132,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/19/this指向/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/14/jsonp原理/"/>
 
 
 
 
 
-  <title>this指向 | Hexo</title>
+  <title>jsonp原理 | Hexo</title>
   
 
 
@@ -266,8 +266,8 @@
   
   
 
-  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/19/this指向/">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/14/jsonp原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TT">
@@ -284,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">this指向</h1>
+          <h1 class="post-title" itemprop="name headline">jsonp原理</h1>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-19T18:59:55+08:00">
-                2017-07-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-14T08:41:37+08:00">
+                2016-12-14
               </time>
             
 
@@ -353,12 +353,19 @@
       
 
       
-        <h1 id="this指向"><a href="#this指向" class="headerlink" title="this指向"></a>this指向</h1><h4 id="通过函数名-直接调用：this指向window"><a href="#通过函数名-直接调用：this指向window" class="headerlink" title="通过函数名()直接调用：this指向window"></a>通过函数名()直接调用：this指向window</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function func()&#123;</div><div class="line">    console.log(this);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//① 通过函数名()直接调用：this指向window</div><div class="line">func(); // this---&gt;window</div></pre></td></tr></table></figure>
-<h4 id="通过对象-函数名-调用的：this指向这个对象"><a href="#通过对象-函数名-调用的：this指向这个对象" class="headerlink" title="通过对象.函数名()调用的：this指向这个对象"></a>通过对象.函数名()调用的：this指向这个对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function func()&#123;</div><div class="line">    console.log(this);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//② 通过对象.函数名()调用的：this指向这个对象</div><div class="line">    // 狭义对象</div><div class="line">    var obj = &#123;</div><div class="line">        name:&quot;obj&quot;,</div><div class="line">        func1 :func</div><div class="line">    &#125;;</div><div class="line">    obj.func1(); // this---&gt;obj</div><div class="line">    </div><div class="line">    // 广义对象</div><div class="line">    document.getElementById(&quot;div&quot;).onclick = function()&#123;</div><div class="line">        this.style.backgroundColor = &quot;red&quot;;</div><div class="line">    &#125;; // this---&gt;div</div></pre></td></tr></table></figure>
+        <h1 id="jsonp原理介绍"><a href="#jsonp原理介绍" class="headerlink" title="jsonp原理介绍"></a>jsonp原理介绍</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">平时写一个script标签 src属性赋值一个连接</div><div class="line">浏览器在解析这个script标签的时候,会向src所指向的这个地址发送一个请求</div><div class="line">将请求下来的数据,当做js代码直接执行</div><div class="line"></div><div class="line">url:请求的链接</div><div class="line">callback:请求成功之后的回调函数</div><div class="line">function jsonp(url,callback)&#123;</div><div class="line">    var cbName=&quot;jsonp&quot;+parseInt(Math.random()*1000);</div><div class="line">    window[cbName]=callback;//先生成等后台返回数据后再执行</div><div class="line">    var script=document.creatElement(&quot;script&quot;);</div><div class="line">    script.src=url+&quot;?callback=&quot;+cbName;</div><div class="line">    document.body.appendchild(script)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<h4 id="函数作为数组的一个元素，通过数组下标调用的：this指向这个数组"><a href="#函数作为数组的一个元素，通过数组下标调用的：this指向这个数组" class="headerlink" title="函数作为数组的一个元素，通过数组下标调用的：this指向这个数组"></a>函数作为数组的一个元素，通过数组下标调用的：this指向这个数组</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function func()&#123;</div><div class="line">    console.log(this);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//③ 函数作为数组的一个元素，通过数组下标调用的：this指向这个数组</div><div class="line">var arr = [func,1,2,3];</div><div class="line">arr[0]();  // this---&gt;arr</div></pre></td></tr></table></figure>
-<h4 id="函数作为window内置函数的回调函数调用：this指向window（-setInterval-setTimeout-等）"><a href="#函数作为window内置函数的回调函数调用：this指向window（-setInterval-setTimeout-等）" class="headerlink" title="函数作为window内置函数的回调函数调用：this指向window（ setInterval setTimeout 等）"></a>函数作为window内置函数的回调函数调用：this指向window（ setInterval setTimeout 等）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function func()&#123;</div><div class="line">    console.log(this);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//④ 函数作为window内置函数的回调函数调用：this指向window</div><div class="line">setTimeout(func,1000);// this---&gt;window</div><div class="line">//setInterval(func,1000);</div></pre></td></tr></table></figure>
-<h4 id="函数作为构造函数，用new关键字调用时：this指向新new出的对象"><a href="#函数作为构造函数，用new关键字调用时：this指向新new出的对象" class="headerlink" title="函数作为构造函数，用new关键字调用时：this指向新new出的对象"></a>函数作为构造函数，用new关键字调用时：this指向新new出的对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function func()&#123;</div><div class="line">    console.log(this);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//⑤ 函数作为构造函数，用new关键字调用时：this指向新new出的对象</div><div class="line">var obj = new func(); //this---&gt;new出的新obj</div></pre></td></tr></table></figure>
+<ul>
+<li>服务器端返回来的jsonp数据是一个函数调用的形式</li>
+<li><p>callback名称(数据对象)</p>
+</li>
+<li><p>因为使用script标签的src属性发生的请求,所以最终请求下来的内容会被当做js代码来执行</p>
+</li>
+<li>所以服务器端返回的  callback名称(数据对象)会被当做js代码直接执行</li>
+<li></li>
+<li><p>只要能够在全局生成一个callback名称 这个函数,那么就可以成功调用,也就类似于一个成功之后的回调函数 </p>
+</li>
+</ul>
 
       
     </div>
@@ -422,8 +429,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/19/远程仓库管理操作/" rel="next" title="远程仓库管理操作">
-                <i class="fa fa-chevron-left"></i> 远程仓库管理操作
+              <a href="/2016/02/10/setTimeout/" rel="next" title="setTimeout">
+                <i class="fa fa-chevron-left"></i> setTimeout
               </a>
             
           </div>
@@ -431,6 +438,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/19/1/" rel="prev" title="1">
+                1 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -580,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#this指向"><span class="nav-number">1.</span> <span class="nav-text">this指向</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通过函数名-直接调用：this指向window"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">通过函数名()直接调用：this指向window</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过对象-函数名-调用的：this指向这个对象"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">通过对象.函数名()调用的：this指向这个对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数作为数组的一个元素，通过数组下标调用的：this指向这个数组"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">函数作为数组的一个元素，通过数组下标调用的：this指向这个数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数作为window内置函数的回调函数调用：this指向window（-setInterval-setTimeout-等）"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">函数作为window内置函数的回调函数调用：this指向window（ setInterval setTimeout 等）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数作为构造函数，用new关键字调用时：this指向新new出的对象"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">函数作为构造函数，用new关键字调用时：this指向新new出的对象</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#jsonp原理介绍"><span class="nav-number">1.</span> <span class="nav-text">jsonp原理介绍</span></a></li></ol></div>
             
 
           </div>

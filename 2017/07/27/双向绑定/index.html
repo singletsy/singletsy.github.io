@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="this指向通过函数名()直接调用：this指向window1234567function func()&amp;#123;    console.log(this);&amp;#125;//① 通过函数名()直接调用：this指向windowfunc(); // this---&amp;gt;window 通过对象.函数名()调用的：this指向这个对象12345678910111213141516function f">
+<meta name="description" content="双向数据绑定的原理Vue中通过Object.defineProperty这个方式实现双向绑定React是通过虚拟DOM实现的双向绑定Augular 是通过脏检测(dirty-check) 机制,实现双向数据绑定 重新digest的次数不超过10次  执行$digest方法的时机：  1. 页面中有内容变化的时候 2. controller中有对数据进行操作的内容的时候 3. $http   $ap">
 <meta name="keywords" content="学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="this指向">
-<meta property="og:url" content="http://yoursite.com/2017/07/19/this指向/index.html">
+<meta property="og:title" content="双向绑定">
+<meta property="og:url" content="http://yoursite.com/2017/07/27/双向绑定/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="this指向通过函数名()直接调用：this指向window1234567function func()&amp;#123;    console.log(this);&amp;#125;//① 通过函数名()直接调用：this指向windowfunc(); // this---&amp;gt;window 通过对象.函数名()调用的：this指向这个对象12345678910111213141516function f">
+<meta property="og:description" content="双向数据绑定的原理Vue中通过Object.defineProperty这个方式实现双向绑定React是通过虚拟DOM实现的双向绑定Augular 是通过脏检测(dirty-check) 机制,实现双向数据绑定 重新digest的次数不超过10次  执行$digest方法的时机：  1. 页面中有内容变化的时候 2. controller中有对数据进行操作的内容的时候 3. $http   $ap">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-19T11:28:09.078Z">
+<meta property="og:updated_time" content="2017-07-27T00:59:27.053Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="this指向">
-<meta name="twitter:description" content="this指向通过函数名()直接调用：this指向window1234567function func()&amp;#123;    console.log(this);&amp;#125;//① 通过函数名()直接调用：this指向windowfunc(); // this---&amp;gt;window 通过对象.函数名()调用的：this指向这个对象12345678910111213141516function f">
+<meta name="twitter:title" content="双向绑定">
+<meta name="twitter:description" content="双向数据绑定的原理Vue中通过Object.defineProperty这个方式实现双向绑定React是通过虚拟DOM实现的双向绑定Augular 是通过脏检测(dirty-check) 机制,实现双向数据绑定 重新digest的次数不超过10次  执行$digest方法的时机：  1. 页面中有内容变化的时候 2. controller中有对数据进行操作的内容的时候 3. $http   $ap">
 
 
 
@@ -132,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/19/this指向/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/27/双向绑定/"/>
 
 
 
 
 
-  <title>this指向 | Hexo</title>
+  <title>双向绑定 | Hexo</title>
   
 
 
@@ -266,8 +266,8 @@
   
   
 
-  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/19/this指向/">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/27/双向绑定/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TT">
@@ -284,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">this指向</h1>
+          <h1 class="post-title" itemprop="name headline">双向绑定</h1>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-19T18:59:55+08:00">
-                2017-07-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-27T08:57:00+08:00">
+                2017-07-27
               </time>
             
 
@@ -353,12 +353,18 @@
       
 
       
-        <h1 id="this指向"><a href="#this指向" class="headerlink" title="this指向"></a>this指向</h1><h4 id="通过函数名-直接调用：this指向window"><a href="#通过函数名-直接调用：this指向window" class="headerlink" title="通过函数名()直接调用：this指向window"></a>通过函数名()直接调用：this指向window</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function func()&#123;</div><div class="line">    console.log(this);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//① 通过函数名()直接调用：this指向window</div><div class="line">func(); // this---&gt;window</div></pre></td></tr></table></figure>
-<h4 id="通过对象-函数名-调用的：this指向这个对象"><a href="#通过对象-函数名-调用的：this指向这个对象" class="headerlink" title="通过对象.函数名()调用的：this指向这个对象"></a>通过对象.函数名()调用的：this指向这个对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function func()&#123;</div><div class="line">    console.log(this);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//② 通过对象.函数名()调用的：this指向这个对象</div><div class="line">    // 狭义对象</div><div class="line">    var obj = &#123;</div><div class="line">        name:&quot;obj&quot;,</div><div class="line">        func1 :func</div><div class="line">    &#125;;</div><div class="line">    obj.func1(); // this---&gt;obj</div><div class="line">    </div><div class="line">    // 广义对象</div><div class="line">    document.getElementById(&quot;div&quot;).onclick = function()&#123;</div><div class="line">        this.style.backgroundColor = &quot;red&quot;;</div><div class="line">    &#125;; // this---&gt;div</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h4 id="函数作为数组的一个元素，通过数组下标调用的：this指向这个数组"><a href="#函数作为数组的一个元素，通过数组下标调用的：this指向这个数组" class="headerlink" title="函数作为数组的一个元素，通过数组下标调用的：this指向这个数组"></a>函数作为数组的一个元素，通过数组下标调用的：this指向这个数组</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function func()&#123;</div><div class="line">    console.log(this);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//③ 函数作为数组的一个元素，通过数组下标调用的：this指向这个数组</div><div class="line">var arr = [func,1,2,3];</div><div class="line">arr[0]();  // this---&gt;arr</div></pre></td></tr></table></figure>
-<h4 id="函数作为window内置函数的回调函数调用：this指向window（-setInterval-setTimeout-等）"><a href="#函数作为window内置函数的回调函数调用：this指向window（-setInterval-setTimeout-等）" class="headerlink" title="函数作为window内置函数的回调函数调用：this指向window（ setInterval setTimeout 等）"></a>函数作为window内置函数的回调函数调用：this指向window（ setInterval setTimeout 等）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function func()&#123;</div><div class="line">    console.log(this);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//④ 函数作为window内置函数的回调函数调用：this指向window</div><div class="line">setTimeout(func,1000);// this---&gt;window</div><div class="line">//setInterval(func,1000);</div></pre></td></tr></table></figure>
-<h4 id="函数作为构造函数，用new关键字调用时：this指向新new出的对象"><a href="#函数作为构造函数，用new关键字调用时：this指向新new出的对象" class="headerlink" title="函数作为构造函数，用new关键字调用时：this指向新new出的对象"></a>函数作为构造函数，用new关键字调用时：this指向新new出的对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function func()&#123;</div><div class="line">    console.log(this);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//⑤ 函数作为构造函数，用new关键字调用时：this指向新new出的对象</div><div class="line">var obj = new func(); //this---&gt;new出的新obj</div></pre></td></tr></table></figure>
+        <h1 id="双向数据绑定的原理"><a href="#双向数据绑定的原理" class="headerlink" title="双向数据绑定的原理"></a>双向数据绑定的原理</h1><h3 id="Vue中通过Object-defineProperty这个方式实现双向绑定"><a href="#Vue中通过Object-defineProperty这个方式实现双向绑定" class="headerlink" title="Vue中通过Object.defineProperty这个方式实现双向绑定"></a>Vue中通过Object.defineProperty这个方式实现双向绑定</h3><h3 id="React是通过虚拟DOM实现的双向绑定"><a href="#React是通过虚拟DOM实现的双向绑定" class="headerlink" title="React是通过虚拟DOM实现的双向绑定"></a>React是通过虚拟DOM实现的双向绑定</h3><h3 id="Augular-是通过脏检测-dirty-check-机制-实现双向数据绑定"><a href="#Augular-是通过脏检测-dirty-check-机制-实现双向数据绑定" class="headerlink" title="Augular 是通过脏检测(dirty-check) 机制,实现双向数据绑定"></a>Augular 是通过脏检测(dirty-check) 机制,实现双向数据绑定</h3><ol>
+<li><p>重新digest的次数不超过10次</p>
+</li>
+<li><p>执行$digest方法的时机：</p>
+</li>
+<li><pre><code>1. 页面中有内容变化的时候
+2. controller中有对数据进行操作的内容的时候
+3. $http 
+</code></pre></li>
+<li><p>$apply 方法，  他会将angular中所有的操作进行包装，包装后的结果就是，先执行用户要执行的代码，再调用$digest</p>
+</li>
+</ol>
 
       
     </div>
@@ -422,8 +428,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/19/远程仓库管理操作/" rel="next" title="远程仓库管理操作">
-                <i class="fa fa-chevron-left"></i> 远程仓库管理操作
+              <a href="/2017/07/19/this指向/" rel="next" title="this指向">
+                <i class="fa fa-chevron-left"></i> this指向
               </a>
             
           </div>
@@ -432,8 +438,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/27/双向绑定/" rel="prev" title="双向绑定">
-                双向绑定 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/27/object-defineProptype/" rel="prev" title="object.defineProptype">
+                object.defineProptype <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -584,7 +590,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#this指向"><span class="nav-number">1.</span> <span class="nav-text">this指向</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通过函数名-直接调用：this指向window"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">通过函数名()直接调用：this指向window</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过对象-函数名-调用的：this指向这个对象"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">通过对象.函数名()调用的：this指向这个对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数作为数组的一个元素，通过数组下标调用的：this指向这个数组"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">函数作为数组的一个元素，通过数组下标调用的：this指向这个数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数作为window内置函数的回调函数调用：this指向window（-setInterval-setTimeout-等）"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">函数作为window内置函数的回调函数调用：this指向window（ setInterval setTimeout 等）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数作为构造函数，用new关键字调用时：this指向新new出的对象"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">函数作为构造函数，用new关键字调用时：this指向新new出的对象</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#双向数据绑定的原理"><span class="nav-number">1.</span> <span class="nav-text">双向数据绑定的原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue中通过Object-defineProperty这个方式实现双向绑定"><span class="nav-number">1.0.1.</span> <span class="nav-text">Vue中通过Object.defineProperty这个方式实现双向绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#React是通过虚拟DOM实现的双向绑定"><span class="nav-number">1.0.2.</span> <span class="nav-text">React是通过虚拟DOM实现的双向绑定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Augular-是通过脏检测-dirty-check-机制-实现双向数据绑定"><span class="nav-number">1.0.3.</span> <span class="nav-text">Augular 是通过脏检测(dirty-check) 机制,实现双向数据绑定</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
